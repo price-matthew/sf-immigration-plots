@@ -130,16 +130,13 @@ sf_dens <-   ggplot(sf_voters, aes(immig_econ_mean, immig_soc_mean)) +
   
   theme_bw() +
   
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
+  theme(panel.grid = element_blank(),
         panel.border = element_blank(), 
-        axis.ticks.y=element_blank(), 
-        axis.ticks.x=element_blank(), 
+        axis.ticks = element_blank(), 
         axis.title.x = element_text(family = "os", colour = "grey30", margin = margin(t = 10, b = 10), size = 11),
         axis.title.y = element_text(family = "os", colour = "grey30", margin = margin(l = 10, r = -10), size = 11),
         legend.position="none",
-        axis.text.x = element_text(size = 11, family = "os"),
-        axis.text.y = element_text(size = 11, family = "os"),
+        axis.text = element_text(size = 11, family = "os"),
         plot.title = element_text(family = "os", colour = "grey30", margin = margin(t=10, b=10), face = "bold"),
         plot.caption = element_text(family = "os", size = 11, hjust = 0, colour = "grey30", face = "italic"),
         plot.subtitle = element_text(family = "os", colour = "grey30", face = "bold.italic")) 
@@ -180,11 +177,9 @@ create_density_plot <- function(data, title, colour, show_x, show_y) {
     
     theme(
       panel.border = element_blank(), 
-      axis.ticks.y=element_blank(), 
-      axis.ticks.x=element_blank(), 
-      panel.grid.major = element_blank(),
+      axis.ticks = element_blank(), 
+      panel.grid = element_blank(),
       plot.subtitle = element_text(family = "os", colour = "grey30", face = "bold.italic", margin = margin(l = 20)),
-      panel.grid.minor = element_blank(),
       axis.title.x = element_text(family = "os", colour = "grey30", margin = margin(t = 15, b = 5), size = 11),
       axis.title.y = element_text(family = "os", colour = "grey30", margin = margin(l = 5, r = 15), size = 11),
       legend.position = "none",
